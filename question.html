@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function processConfirm(answer) {
+        let result = "";
+        if (answer) {
+            result = "Chúc mừng bạn đã lựa chọn đúng";
+        } else {
+            result = "Không ăn cứt thì ăn gì?";
+        }
+        return result;
+    }
+    let confirmAnswer = confirm("Có muốn ăn cứt không?");
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+</script>
+</body>
+</html>
