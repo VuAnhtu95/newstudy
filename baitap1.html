@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let tong = 0
+    n = ""
+    var arr1 = []
+    for (j=0;j<10;j++){
+        let a = parseInt(prompt());
+        arr1.push(a)
+    }
+    for (i=0;i<arr1.length;i++){
+        if (arr1[i] >= 10){
+            tong = tong + arr1[i]
+            n = n + arr1[i] + " ";
+        }
+    }
+    document.write("Những số lớn hơn 10 là " + n + "</br>")
+    document.write("Tổng của chúng = " + tong)
+</script>
+</body>
+</html>

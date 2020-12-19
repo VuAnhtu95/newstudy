@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương Trình Quản Lý Sản Phẩm</title>
+</head>
+<link rel="stylesheet" href="UngdungQLSP.css">
+<body bgcolor="#a9a9a9" onload="alert('Chào mừng đến với ứng dụng siêu cấp vjp pro')">
+    <center><h2>Add New Product</h2></center>
+    <center><div style="width:100%; height: 100px">
+        <input placeholder="New Product" id="product"/>
+        <button onclick="addProduct()">Add</button>
+    </div></center>
+<center><div style="width: 100%; height: 500px">
+    <h2>Display All Product</h2>
+    <table style="width: 1000px; height: 400px">
+        <thead>
+        <tr>
+            <th>Product Name</th>
+            <th></th>
+            <th style="width: 50px" rowspan="3"></th>
+        </tr>
+        </thead>
+        <tbody id="result">
+        </tbody>
+    </table>
+</div></center>
+</body>
+<script>
+    let arr1 = []
+    function addProduct(...product){
+        let productt = document.getElementById('product').value
+        arr1.push(productt);
+        document.getElementById('product').value = "";
+        getListResult();
+        return arr1
+    }
+    function getListResult(){
+        document.getElementById('result').innerHTML = "";
+        for(let item = 0; item < arr1.length; item++) {
+            document.getElementById('result').innerHTML += `
+            <tr>
+                <td style="text-align: center">
+                ` + arr1[item] + `
+                </td>
+                <td>
+                    <button onclick='removeProductItem(${item})'>Delete</button>
+                </td>
+                <td>
+                    <button onclick='editProductItem(${item})'>Edit</button>
+                </td>
+            </tr>`
+        }
+        return;
+    }
+    function removeProductItem(index){
+        arr1.splice(index,1)
+        getListResult()
+    }
+    function editProductItem(index){
+        arr1.splice(index,1,alert("Nhập sản phẩm mới vào đi đmm"));
+        removeProductItem()
+        getListResult()
+    }
+</script>
+</html>

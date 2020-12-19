@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let array = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"]
+    let array2 = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"]
+    function aaFunciton(para1) {
+        let flag = true
+        for (i=0;i<array.length;i++){
+                if (para1 == array[i]){
+                    flag = true
+                    array[0] = array2[0]
+                }
+                else
+                    if (para1 != array[i])
+                {
+                    flag = false
+                }
+            }
+        return flag;
+    }
+    let a = aaFunciton(prompt());
+    console.log(a)
+</script>
+</body>
+</html>
