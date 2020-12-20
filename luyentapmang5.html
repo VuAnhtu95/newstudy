@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var arr5 = [];
+    for (var i=0;i<4;i++) {
+        arr5.push(parseInt(prompt()))
+    }
+    var count = 0
+    for (var j=0;j<arr5.length;j++){
+        if (arr5[j]<0){
+            count++
+            nguyenam = j
+        }
+    }
+    console.log(arr5)
+    console.log("có "+count + " số nguyên âm " )
+</script>
+</body>
+</html>
